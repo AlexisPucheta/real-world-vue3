@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import EventList from '../views/EventList.vue'
 import EventDetails from '@/views/EventDetails.vue'
 import About from '../views/AboutView.vue'
-
+import NotFoundComponent from '../views/NotFoundComponent.vue'
 const routes = [
   {
     path: '/',
@@ -20,6 +20,7 @@ const routes = [
     name: 'About',
     component: About,
   },
+  { path: '/:pathMatch(.*)*', name: 'NotFoundComponent',component: NotFoundComponent },
 ]
 
 const router = createRouter({
